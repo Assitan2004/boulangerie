@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boulangerie Prince — Daloa, Côte d'Ivoire</title>
+  <meta name="description" content="Boulangerie Prince à Daloa : boulangerie, pâtisserie, glacier et restaurant réunis en un seul lieu.">
+  <link rel="icon" href="images/logo.png">
+
+  <!-- Polices Oswald et Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation principale pleine largeur -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#accueil" class="brand">
+        <img src="images/logo.png" alt="Boulangerie Prince" class="brand-logo">
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#accueil" data-target="accueil" class="is-active">Accueil</a></li>
+          <li><a href="#maison" data-target="maison">La Maison</a></li>
+          <li><a href="#boulangerie" data-target="boulangerie">Boulangerie</a></li>
+          <li><a href="#patisserie" data-target="patisserie">Pâtisserie</a></li>
+          <li><a href="#glacier" data-target="glacier">Glacier</a></li>
+          <li><a href="#restaurant" data-target="restaurant">Restaurant</a></li>
+          <li><a href="#galerie" data-target="galerie">Galerie</a></li>
+          <li><a href="#contact" data-target="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-action">
+        <a href="#contact" class="btn btn-header">
+          <svg class="svg-ic" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span>NOUS TROUVER</span>
+          <span class="arr">&rarr;</span>
+        </a>
+      </div>
+      <button class="nav-toggle" aria-label="Ouvrir le menu">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Rail latéral gauche (Chiffres avec ligne verticale + Souris de scroll) -->
+  <nav class="side-rail" aria-label="Navigation rapide">
+    <div class="side-rail-numbers">
+      <a href="#accueil" data-target="accueil" class="is-active">01</a>
+      <a href="#maison" data-target="maison">02</a>
+      <a href="#boulangerie" data-target="boulangerie">03</a>
+      <a href="#galerie" data-target="galerie">04</a>
+      <a href="#experience" data-target="experience">05</a>
+      <a href="#place" data-target="place">06</a>
+      <a href="#contact" data-target="contact">07</a>
+    </div>
+    <div class="side-rail-scroll">
+      <div class="mouse-icon">
+        <span class="mouse-wheel"></span>
+      </div>
+      <span class="scroll-txt">SCROLL</span>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- 01. Hero -->
+    <section class="hero" id="accueil" data-section="accueil">
+      <img src="images/facade.jpg" alt="Façade Boulangerie Prince Daloa" class="hero-bg-img">
+      <div class="container">
+        <div class="hero-content">
+          <h1>
+            ENTREZ<br>
+            CHEZ<br>
+            <span class="gold">PRINCE</span>
+          </h1>
+          <p class="hero-sub">Boulangerie. Pâtisserie.<br>Glacier. Restauration.</p>
+          <div class="hero-actions">
+            <a href="#maison" class="btn">
+              <span>DÉCOUVRIR PRINCE</span>
+              <span class="arr">&rarr;</span>
+            </a>
+          </div>
+          <div class="hero-loc">Daloa &bull; Côte d'Ivoire</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. L'Univers Prince -->
+    <section class="univers-intro" id="maison" data-section="maison">
+      <div class="univers-bg">
+        <img src="images/section2.jpg" alt="Mains de boulanger travaillant la farine">
+        <div class="univers-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="univers-content">
+          <span class="ticket">L'UNIVERS PRINCE</span>
+          <h2>
+            <span>BOULANGERIE.</span>
+            <span class="gold">PÂTISSERIE.</span>
+            <span>GLACIER.</span>
+            <span class="gold">RESTAURATION.</span>
+          </h2>
+          <div class="sub">Daloa, Côte d'Ivoire.</div>
+          <div class="gold-divider"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. Univers Grid 01 à 04 -->
+    <section class="menu-grid-section" id="boulangerie" data-section="boulangerie">
+      <div class="menu-grid">
+
+        <!-- 01 BOULANGERIE -->
+        <a class="menu-tile" href="#galerie">
+          <div class="tile-bg" style="background-image: url('images/baguettes.jpg');"></div>
+          <div class="tile-overlay"></div>
+          <div class="tile-header">
+            <span class="tile-num">01</span>
+            <h3 class="tile-name">BOULANGERIE</h3>
+          </div>
+        </a>
+
+        <!-- 02 PÂTISSERIE -->
+        <a class="menu-tile" id="patisserie" data-section="patisserie" href="#galerie">
+          <div class="tile-bg" style="background-image: url('images/gateau_chocolat.jpg');"></div>
+          <div class="tile-overlay"></div>
+          <div class="tile-header">
+            <span class="tile-num">02</span>
+            <h3 class="tile-name">PÂTISSERIE</h3>
+          </div>
+        </a>
+
+        <!-- 03 GLACIER -->
+        <div class="menu-tile" id="glacier" data-section="glacier">
+          <div class="tile-bg" style="background-image: url('images/glacier.jpg');"></div>
+          <div class="tile-overlay"></div>
+          <div class="tile-header">
+            <span class="tile-num">03</span>
+            <h3 class="tile-name">GLACIER</h3>
+            <span class="soon">Bientôt disponible</span>
+          </div>
+        </div>
+
+        <!-- 04 RESTAURATION -->
+        <a class="menu-tile" id="restaurant" data-section="restaurant" href="#experience">
+          <div class="tile-bg" style="background-image: url('images/restaurant.jpg');"></div>
+          <div class="tile-overlay"></div>
+          <div class="tile-header">
+            <span class="tile-num">04</span>
+            <h3 class="tile-name">RESTAURATION</h3>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- 04. Nos Créations (Visuel panoramique complet) -->
+    <section class="creations" id="galerie" data-section="galerie">
+      <div class="creations-media">
+        <img src="images/montage.jpg" alt="Créations Boulangerie Prince">
+        <div class="creations-overlay"></div>
+      </div>
+      <div class="container creations-container">
+        <div class="creations-copy">
+          <span class="ticket">NOS CRÉATIONS</span>
+          <h2>L'ART DU GOÛT<br>AU QUOTIDIEN</h2>
+          <p>Des produits préparés chaque jour avec passion pour éveiller vos sens.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. Expérience Prince -->
+    <section class="experience" id="experience" data-section="experience">
+      <div class="experience-bg">
+        <img src="images/interior-tv.jpg" alt="Ambiance terrasse restaurant">
+        <div class="experience-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="experience-box">
+          <span class="ticket">L'EXPÉRIENCE PRINCE</span>
+          <h2>
+            PLUS QU'UNE PAUSE,<br>
+            <span class="gold">UN VRAI MOMENT.</span>
+          </h2>
+          <p>Installez-vous, partagez, savourez.<br>Prince est un lieu de vie où la gourmandise rencontre la convivialité.</p>
+          <a href="#place" class="btn">
+            <span>DÉCOUVRIR L'ESPACE</span>
+            <span class="arr">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06. The Place -->
+    <section class="the-place" id="place" data-section="place">
+      <div class="the-place-bg">
+        <img src="images/facade.jpg" alt="Façade de Boulangerie Prince de nuit">
+        <div class="the-place-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="the-place-content">
+          <span class="ticket">THE PLACE</span>
+          <h2>PRINCE</h2>
+          <div class="loc">Daloa &bull; Côte d'Ivoire</div>
+          <p>Au cœur de Daloa, un lieu moderne et chaleureux qui vous accueille chaque jour.</p>
+          <a href="#contact" class="btn">
+            <span>VOIR L'EMPLACEMENT</span>
+            <svg class="svg-ic" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 07. Footer -->
+  <footer class="site-footer" id="contact" data-section="contact">
+    
+    <div class="footer-top">
+      <div class="container footer-top-grid">
+        <div class="footer-map-col">
+          <img src="images/carte.jpg" alt="Carte Boulangerie Prince Daloa" class="footer-map-img">
+        </div>
+
+        <div class="footer-details-col">
+          <span class="ticket">RETROUVEZ-NOUS À DALOA</span>
+          <div class="footer-info-split">
+            <div class="info-item">
+              <svg class="svg-ic" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <p>Daloa Haut-Sassandra,<br>Daloa,<br>Sassandra-Marahoué District,<br>Côte d'Ivoire.</p>
+            </div>
+            <div class="info-item-contacts">
+              <div class="contact-row">
+                <svg class="svg-ic" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+                <span>+225 07 98 60 50 50</span>
+              </div>
+              <div class="contact-row">
+                <svg class="svg-ic" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <span>boulangeriesprince@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-actions-col">
+          <a class="btn footer-btn" href="https://maps.google.com" target="_blank" rel="noopener">
+            <span>VOIR L'ITINÉRAIRE</span>
+            <span class="arr">&rarr;</span>
+          </a>
+          <a class="btn footer-btn" href="tel:+2250798605050">
+            <span>APPELER</span>
+            <svg class="svg-ic" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+          </a>
+          <a class="btn footer-btn" href="mailto:boulangeriesprince@gmail.com">
+            <span>NOUS ÉCRIRE</span>
+            <svg class="svg-ic" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-cta">
+      <div class="container footer-cta-grid">
+        <div class="footer-cta-title">
+          <h2>
+            VOTRE PROCHAINE<br>
+            PAUSE COMMENCE<br>
+            <span class="gold">CHEZ PRINCE.</span>
+          </h2>
+        </div>
+
+        <div class="footer-cta-badge">
+          <img src="images/logo.png" alt="Médaillon Boulangerie Prince">
+        </div>
+
+        <div class="footer-cta-buttons-block">
+          <div class="cta-location-label">Daloa &bull; Côte d'Ivoire</div>
+          <div class="cta-actions-row">
+            <a class="btn btn-gold" href="https://maps.google.com" target="_blank" rel="noopener">
+              <span>NOUS TROUVER</span>
+              <svg class="svg-ic" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </a>
+            <a class="btn btn-border" href="mailto:boulangeriesprince@gmail.com">
+              <span>NOUS CONTACTER</span>
+              <span class="arr">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <div class="copy">&copy; Boulangerie Prince</div>
+        <div class="legal-links">
+          <a href="#">Mentions légales</a>
+          <span class="sep">|</span>
+          <a href="#">Politique de confidentialité</a>
+        </div>
+        <div class="social-icon">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg class="svg-social" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
