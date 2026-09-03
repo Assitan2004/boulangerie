@@ -1,23 +1,39 @@
 document.addEventListener('DOMContentLoaded', function () {
   const header = document.querySelector('.site-header');
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinks = Array.from(document.querySelectorAll('.main-nav a'));
   const sections = Array.from(document.querySelectorAll('main [data-section]'));
   const sideLinks = Array.from(document.querySelectorAll('.side-rail-numbers a[data-target]'));
-  const navLinks = Array.from(document.querySelectorAll('.main-nav a[data-target]'));
   const yearSpan = document.getElementById('year');
 
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
   }
 
+  // Gestion du menu burger mobile
+  if (toggle && header) {
+    toggle.addEventListener('click', function () {
+      const isOpen = header.classList.toggle('nav-open');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    // Fermeture automatique au clic sur un lien du menu
+    navLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        header.classList.remove('nav-open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // Détection du scroll pour la barre transparente/pleine et les liens actifs
   function handleScroll() {
-    // Fond plein sur le header au défilement
     if (window.scrollY > 40) {
       header.classList.add('is-solid');
     } else {
       header.classList.remove('is-solid');
     }
 
-    // Détection de la section active pour le rail latéral et la nav
     const scrollPos = window.scrollY + window.innerHeight * 0.35;
     let currentId = null;
 
@@ -41,11 +57,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
-
-  const toggle = document.querySelector('.nav-toggle');
-  if (toggle) {
-    toggle.addEventListener('click', function () {
-      header.classList.toggle('nav-open');
-    });
-  }
 });
