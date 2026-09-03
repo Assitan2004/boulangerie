@@ -16,7 +16,7 @@
 </head>
 <body>
 
-  <!-- Navigation principale pleine largeur -->
+  <!-- Navigation : Menu à gauche | Logo centré | Bouton à droite -->
   <header class="site-header">
     <div class="header-inner">
       <a href="#accueil" class="brand">
@@ -47,7 +47,7 @@
     </div>
   </header>
 
-  <!-- Rail latéral gauche (Chiffres avec ligne verticale + Souris de scroll) -->
+  <!-- Rail latéral gauche (01..07 + souris scroll) -->
   <nav class="side-rail" aria-label="Navigation rapide">
     <div class="side-rail-numbers">
       <a href="#accueil" data-target="accueil" class="is-active">01</a>
@@ -111,7 +111,7 @@
       </div>
     </section>
 
-    <!-- 03. Univers Grid 01 à 04 -->
+    <!-- 03. Grille des 4 Univers -->
     <section class="menu-grid-section" id="boulangerie" data-section="boulangerie">
       <div class="menu-grid">
 
@@ -159,7 +159,7 @@
       </div>
     </section>
 
-    <!-- 04. Nos Créations (Visuel panoramique complet) -->
+    <!-- 04. Nos Créations (Fond intégral) -->
     <section class="creations" id="galerie" data-section="galerie">
       <div class="creations-media">
         <img src="images/montage.jpg" alt="Créations Boulangerie Prince">
@@ -221,12 +221,14 @@
   <!-- 07. Footer -->
   <footer class="site-footer" id="contact" data-section="contact">
     
+    <!-- Partie Haute : Carte fondue + Informations + Boutons -->
     <div class="footer-top">
-      <div class="container footer-top-grid">
-        <div class="footer-map-col">
-          <img src="images/carte.jpg" alt="Carte Boulangerie Prince Daloa" class="footer-map-img">
-        </div>
+      <div class="footer-map-backdrop">
+        <img src="images/carte.jpg" alt="Localisation Daloa Prince">
+        <div class="footer-map-fade"></div>
+      </div>
 
+      <div class="container footer-top-inner">
         <div class="footer-details-col">
           <span class="ticket">RETROUVEZ-NOUS À DALOA</span>
           <div class="footer-info-split">
@@ -261,10 +263,10 @@
             <svg class="svg-ic" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           </a>
         </div>
-
       </div>
     </div>
 
+    <!-- Bandeau CTA -->
     <div class="footer-cta">
       <div class="container footer-cta-grid">
         <div class="footer-cta-title">
@@ -295,6 +297,7 @@
       </div>
     </div>
 
+    <!-- Copyright -->
     <div class="footer-bottom">
       <div class="container footer-bottom-flex">
         <div class="copy">&copy; Boulangerie Prince</div>

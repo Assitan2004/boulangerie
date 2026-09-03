@@ -25,7 +25,7 @@
 
 html, body {
   width: 100%;
-  overflow-x: hidden; /* Supprime tout défilement horizontal parasite */
+  overflow-x: hidden;
   scroll-behavior: smooth;
   background-color: var(--bg-deep);
 }
@@ -880,54 +880,79 @@ h1, h2, h3, h4 {
   position: relative;
 }
 
+/* Partie Haute : Carte fondue & Coordonnées */
 .footer-top {
-  padding: 60px 0 40px;
+  position: relative;
+  padding: 60px 0 50px;
+  background-color: #050505;
+  overflow: hidden;
 }
 
-.footer-top-grid {
-  display: grid;
-  grid-template-columns: 240px 1fr 240px;
-  gap: 40px;
-  align-items: center;
+.footer-map-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 42%;
+  pointer-events: none;
+  z-index: 1;
 }
 
-.footer-map-col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-map-img {
+.footer-map-backdrop img {
   width: 100%;
-  max-width: 220px;
-  height: auto;
-  border-radius: 4px;
-  opacity: 0.9;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  mix-blend-mode: screen;
+  opacity: 0.85;
+}
+
+.footer-map-fade {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(90deg, transparent 40%, #050505 100%),
+    linear-gradient(0deg, #050505 0%, transparent 20%, transparent 80%, #050505 100%);
+}
+
+.footer-top-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 50px;
+  align-items: center;
+  padding-left: 28%;
 }
 
 .footer-details-col .ticket {
+  font-family: var(--font-title);
   font-size: 11px;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   color: var(--gold);
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  display: block;
 }
 
 .footer-info-split {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 24px;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 30px;
 }
 
 .info-item {
   display: flex;
   gap: 12px;
-  color: #bfbfbf;
+  color: #a6a6a6;
   font-size: 12.5px;
   line-height: 1.6;
 }
 
-.info-item .svg-ic,
-.contact-row .svg-ic {
+.info-item p {
+  color: #b5b5b5;
+}
+
+.info-item .svg-ic {
   margin-top: 3px;
 }
 
@@ -941,7 +966,7 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #bfbfbf;
+  color: #b5b5b5;
   font-size: 12.5px;
 }
 
@@ -953,11 +978,15 @@ h1, h2, h3, h4 {
 
 .footer-btn {
   width: 100%;
-  padding: 10px 18px;
+  padding: 11px 18px;
   justify-content: space-between;
-  font-size: 12px;
-  border-color: rgba(201, 152, 57, 0.4);
+  font-family: var(--font-title);
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  border: 1px solid rgba(201, 152, 57, 0.45);
   color: #e5e5e5;
+  background: transparent;
+  transition: all 0.25s ease;
 }
 
 .footer-btn:hover {
@@ -966,6 +995,11 @@ h1, h2, h3, h4 {
   color: #000;
 }
 
+.footer-btn:hover .svg-ic {
+  fill: #000;
+}
+
+/* Bandeau CTA */
 .footer-cta {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -1062,16 +1096,22 @@ h1, h2, h3, h4 {
    TABLETTES & ÉCRANS MOYENS (<= 1024px)
    ========================================================================== */
 
+@media (max-width: 1200px) {
+  .footer-top-inner {
+    padding-left: 18%;
+    gap: 30px;
+  }
+}
+
 @media (max-width: 1024px) {
   .side-rail {
-    display: none; /* Le rail à gauche disparaît pour libérer l'espace */
+    display: none;
   }
 
   .container {
     padding: 0 30px;
   }
 
-  /* Header Tablette : Logo à gauche | Bouton & burger à droite */
   .header-inner {
     display: flex;
     justify-content: space-between;
@@ -1094,10 +1134,9 @@ h1, h2, h3, h4 {
   }
 
   .nav-toggle {
-    display: block; /* Activation du burger */
+    display: block;
   }
 
-  /* Menu plein écran en rideau sombre */
   .main-nav {
     position: fixed;
     top: 0;
@@ -1133,7 +1172,6 @@ h1, h2, h3, h4 {
     padding: 8px 0;
   }
 
-  /* Sections réalignées */
   .hero-content {
     padding-left: 0;
   }
@@ -1166,15 +1204,20 @@ h1, h2, h3, h4 {
     padding-left: 0;
   }
 
-  /* Footer Tablette */
-  .footer-top-grid {
+  .footer-map-backdrop {
+    width: 100%;
+    opacity: 0.25;
+  }
+
+  .footer-map-fade {
+    background: linear-gradient(180deg, rgba(5,5,5,0.7) 0%, #050505 100%);
+  }
+
+  .footer-top-inner {
+    padding-left: 0;
     grid-template-columns: 1fr;
     gap: 36px;
     text-align: left;
-  }
-
-  .footer-map-col {
-    justify-content: flex-start;
   }
 
   .footer-actions-col {
@@ -1215,7 +1258,6 @@ h1, h2, h3, h4 {
     height: 46px;
   }
 
-  /* Bouton Nous Trouver en version compacte */
   .btn-header {
     padding: 6px 12px;
     font-size: 10px;
@@ -1226,7 +1268,6 @@ h1, h2, h3, h4 {
     display: none;
   }
 
-  /* Hero Mobile */
   .hero {
     min-height: 540px;
   }
@@ -1236,7 +1277,6 @@ h1, h2, h3, h4 {
     line-height: 0.95;
   }
 
-  /* Section Univers */
   .univers-intro {
     min-height: 460px;
     padding: 60px 0;
@@ -1246,7 +1286,6 @@ h1, h2, h3, h4 {
     font-size: 32px;
   }
 
-  /* Grille 4 Univers en 1 colonne sur smartphone */
   .menu-grid {
     grid-template-columns: 1fr;
   }
@@ -1261,7 +1300,6 @@ h1, h2, h3, h4 {
     left: 24px;
   }
 
-  /* Créations sur Mobile */
   .creations {
     min-height: 440px;
     padding: 60px 0;
@@ -1276,7 +1314,6 @@ h1, h2, h3, h4 {
     );
   }
 
-  /* Expérience & The Place */
   .experience {
     min-height: 440px;
   }
@@ -1301,7 +1338,6 @@ h1, h2, h3, h4 {
     );
   }
 
-  /* Footer Mobile */
   .footer-info-split {
     grid-template-columns: 1fr;
     gap: 18px;
